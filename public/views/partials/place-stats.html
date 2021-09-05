@@ -1,0 +1,45 @@
+<md-dialog flex="100" flex-gt-sm="40" aria-label="Place Analytics">
+
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2 md-colors="::{color: 'white'}">{{ obj.title }}</h2>
+      <span flex></span>
+      <ng-md-icon icon="close" class="icon-close" ng-click="onClose()" aria-label="Close dialog">
+      </ng-md-icon>
+    </div>
+  </md-toolbar>
+  <md-dialog-content>
+    <div class="md-dialog-content">
+
+      <div>
+
+        <md-button ng-class="{ 'md-primary': selectedFilter.id === filter.id }" ng-repeat="filter in filters"
+          ng-click="onFilterButtonTouched(filter)">
+          {{ filter.id.toUpperCase() | translate }}
+        </md-button>
+      </div>
+
+      <div layout="row" layout-align="space-around center">
+        <div class="text-center">
+          <h3 class="md-headline">{{ 'LIKES' | translate }}</h3>
+          <h4 class="md-display-1">{{ statistics.likes }}</p>
+        </div>
+        <div class="text-center">
+          <h3 class="md-headline">{{ 'VIEWS' | translate }}</h3>
+          <h4 class="md-display-1">{{ statistics.views }}</p>
+        </div>
+        <div class="text-center">
+          <h3 class="md-headline">{{ 'CALLS' | translate }}</h3>
+          <h4 class="md-display-1">{{ statistics.calls }}</p>
+        </div>
+      </div>
+
+    </div>
+  </md-dialog-content>
+  <md-dialog-actions layout="row">
+    <span flex></span>
+    <md-button ng-click="onClose()">
+      {{ 'CLOSE' | translate }}
+    </md-button>
+  </md-dialog-actions>
+</md-dialog>
