@@ -28,10 +28,19 @@
       <md-toolbar md-colors="::{background: 'dark'}">
         <span flex></span>
         <div layout="column" class="md-toolbar-tools-bottom inset">
+
+          <md-list-item aria-label="Dashboard" md-no-ink href="/admin/welcome" class="<%= page === 'welcome' ? '' : '' %>">
+            <img width="40" height="20" ng-src="/images/m4.png" actual-src="{{:: slide.image.url() }}" /> <p> </p> <p>Multimax <%= user.name %></p>
+
+          </md-list-item>
+
+          <!-- <img width="40" height="20" ng-src="/images/m4.png" actual-src="{{:: slide.image.url() }}" />
           <h5 translate-cloak="HI">
-            <span translate="HI"></span>
+           
+            <span translate="Multimax"></span>
             <%= user.name %>
-          </h5>
+          </h5> -->
+          
         </div>
       </md-toolbar>
       <md-content>
@@ -39,6 +48,7 @@
         <md-list md-colors="::{background: 'dark', color: 'white'}"><br />
 
           <md-list-item aria-label="Dashboard" md-no-ink href="/admin/welcome" class="<%= page === 'welcome' ? 'active' : '' %>">
+            <img  ng-src="/images/dashboard.png" actual-src="{{:: slide.image.url() }}" />
             <div class="inset bold text-small" translate="DASHBOARD" translate-cloak="DASHBOARD">
             </div>
           </md-list-item>
@@ -47,7 +57,8 @@
           user.permissions && user.permissions.indexOf('places') > -1)) { %>
 
           <md-list-item aria-label="Places" md-no-ink href="/admin/places" class="<%= page === 'places' ? 'active' : '' %>">
-            <div class="inset bold text-small" translate="PLACES" translate-cloak="PLACES"></div>
+            <img  ng-src="/images/product.png" actual-src="{{:: slide.image.url() }}" />
+            <div class="inset bold text-small" translate="Productos" translate-cloak="PLACES"></div>
           </md-list-item>
 
           <% } %>
@@ -56,6 +67,7 @@
           user.permissions && user.permissions.indexOf('categories') > -1)) { %>
 
           <md-list-item aria-label="Categories" md-no-ink href="/admin/categories" class="<%= page === 'categories' ? 'active' : '' %>">
+            <img  ng-src="/images/category.png" actual-src="{{:: slide.image.url() }}" />
             <div class="inset bold text-small" translate="CATEGORIES" translate-cloak="CATEGORIES"></div>
           </md-list-item>
 
@@ -65,6 +77,7 @@
           user.permissions && user.permissions.indexOf('users') > -1)) { %>
 
           <md-list-item aria-label="Users" md-no-ink href="/admin/users" class="<%= page === 'users' ? 'active' : '' %>">
+            <img  ng-src="/images/user16.png" actual-src="{{:: slide.image.url() }}" />
             <div class="inset bold text-small" translate="USERS" translate-cloak="USERS"></div>
           </md-list-item>
 
@@ -74,6 +87,7 @@
           user.permissions && user.permissions.indexOf('customers') > -1)) { %>
 
           <md-list-item aria-label="Customers" md-no-ink href="/admin/customers" class="<%= page === 'customers' ? 'active' : '' %>">
+            <img  ng-src="/images/group.png" actual-src="{{:: slide.image.url() }}" />
             <div class="inset bold text-small" translate="CUSTOMERS" translate-cloak="CUSTOMERS"></div>
           </md-list-item>
 
@@ -83,6 +97,7 @@
           user.permissions && user.permissions.indexOf('reviews') > -1)) { %>
 
           <md-list-item aria-label="Reviews" md-no-ink href="/admin/reviews" class="<%= page === 'reviews' ? 'active' : '' %>">
+            <img  ng-src="/images/opinion.png" actual-src="{{:: slide.image.url() }}" />
             <div class="inset bold text-small" translate="REVIEWS" translate-cloak="REVIEWS"></div>
           </md-list-item>
 
@@ -92,6 +107,7 @@
           user.permissions && user.permissions.indexOf('slide_images') > -1)) { %>
 
           <md-list-item aria-label="Slider Images" md-no-ink href="/admin/slider-images" class="<%= page === 'slider-images' ? 'active' : '' %>">
+            <img  ng-src="/images/image.png" actual-src="{{:: slide.image.url() }}" />
             <div class="inset bold text-small" translate="SLIDER_IMAGES" translate-cloak="SLIDER_IMAGES"></div>
           </md-list-item>
 
@@ -101,6 +117,7 @@
           user.permissions && user.permissions.indexOf('slides') > -1)) { %>
 
           <md-list-item aria-label="Slides" md-no-ink href="/admin/slides" class="<%= page === 'slides' ? 'active' : '' %>">
+            <img  ng-src="/images/slider.png" actual-src="{{:: slide.image.url() }}" />
             <div class="inset bold text-small" translate="SLIDES" translate-cloak="SLIDES"></div>
           </md-list-item>
 
@@ -110,6 +127,7 @@
           user.permissions && user.permissions.indexOf('packages') > -1)) { %>
 
           <md-list-item aria-label="Packages" md-no-ink href="/admin/packages" class="<%= page === 'packages' ? 'active' : '' %>">
+            <img  ng-src="/images/package.png" actual-src="{{:: slide.image.url() }}" />
             <div class="inset bold text-small" translate="PACKAGES" translate-cloak="PACKAGES"></div>
           </md-list-item>
 
@@ -119,6 +137,7 @@
           user.permissions && user.permissions.indexOf('user_packages') > -1)) { %>
 
           <md-list-item aria-label="User packages" md-no-ink href="/admin/user-packages" class="<%= page === 'user-packages' ? 'active' : '' %>">
+            <img  ng-src="/images/sold.png" actual-src="{{:: slide.image.url() }}" />
             <div class="inset bold text-small" translate="USER_PACKAGES" translate-cloak="USER_PACKAGES"></div>
           </md-list-item>
 
@@ -128,6 +147,7 @@
           user.permissions && user.permissions.indexOf('posts') > -1)) { %>
 
           <md-list-item aria-label="Posts" md-no-ink href="/admin/posts" class="<%= page === 'posts' ? 'active' : '' %>">
+            <img  ng-src="/images/post.png" actual-src="{{:: slide.image.url() }}" />
             <div class="inset bold text-small" translate="POSTS" translate-cloak="POSTS"></div>
           </md-list-item>
 
@@ -136,6 +156,7 @@
           <% if (user.type === 'super_admin' || (user.type === 'admin' &&
           user.permissions && user.permissions.indexOf('pages') > -1)) { %>
           <md-list-item aria-label="Pages" md-no-ink href="/admin/pages" class="<%= page === 'pages' ? 'active' : '' %>">
+            <img  ng-src="/images/page.png" actual-src="{{:: slide.image.url() }}" />
             <div class="inset bold text-small" translate="PAGES" translate-cloak="PAGES"></div>
           </md-list-item>
 
@@ -144,6 +165,7 @@
           <% if (user.type === 'super_admin' || (user.type === 'admin' &&
           user.permissions && user.permissions.indexOf('notifications') > -1)) { %>
           <md-list-item aria-label="Notifications" md-no-ink href="/admin/notifications" class="<%= page === 'notifications' ? 'active' : '' %>">
+            <img  ng-src="/images/notification.png" actual-src="{{:: slide.image.url() }}" />
             <div class="inset bold text-small" translate="NOTIFICATIONS" translate-cloak="NOTIFICATIONS"></div>
           </md-list-item>
 
@@ -152,18 +174,21 @@
           <% if (user.type === 'super_admin' || (user.type === 'admin' &&
           user.permissions && user.permissions.indexOf('config') > -1)) { %>
           <md-list-item md-no-ink aria-label="App config" ng-click="onPresentAppConfigView($event)">
+            <img  ng-src="/images/settings.png" actual-src="{{:: slide.image.url() }}" />
             <div class="inset bold text-small" translate="APP_CONFIG" translate-cloak="APP_CONFIG"></div>
           </md-list-item>
 
           <% } %>
 
           <md-list-item md-no-ink aria-label="Change password" ng-click="onChangePassword($event)">
+            <img  ng-src="/images/padlock.png" actual-src="{{:: slide.image.url() }}" />
             <div class="inset bold text-small" translate="CHANGE_PASSWORD" translate-cloak="CHANGE_PASSWORD"></div>
           </md-list-item>
 
           <md-divider></md-divider>
 
           <md-list-item aria-label="Logout" md-no-ink href="/auth/logout">
+            <img  ng-src="/images/logout.png" actual-src="{{:: slide.image.url() }}" />
             <div class="inset bold text-small" translate="LOGOUT" translate-cloak="LOGOUT"></div>
           </md-list-item>
 
